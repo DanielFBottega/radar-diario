@@ -1,0 +1,27 @@
+{
+  "atualizado": "2026-11-05T07:30:00-03:00",
+  "data": "Qui, 5 nov",
+  "itens": [
+    {
+      "tipo": "tech",
+      "rotulo": "Tech IA",
+      "titulo": "OpenAI compra Pierre para levar Git ao Codex",
+      "resumo": "Anthropic lança FlashProve; Google apoia data center de US$ 19 bi da Anthropic.",
+      "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
+    },
+    {
+      "tipo": "biblia",
+      "rotulo": "Estudo · Dia 1",
+      "titulo": "João 1:1-18 · A Palavra que se fez carne",
+      "resumo": "Para memorizar: João 1:14.",
+      "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
+    },
+    {
+      "tipo": "piano",
+      "rotulo": "Teclado · Dia 1",
+      "titulo": "Inversões e o caminho mais curto (Dó)",
+      "resumo": "I–vi–IV–V com condução de vozes e baixo descendente.",
+      "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
+    }
+  ]
+}
