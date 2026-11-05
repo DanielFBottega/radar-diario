@@ -85,9 +85,9 @@ def text_block(title_font=F_HEAD, title_size=21, with_date=True):
         label += '  ·  $tc(up, wg(gv(feed), rss, desc))$'
     return stack([
         text(label, 12, F_BOLD, "#FF34D1BF", width=300, lines=1, title="Rótulo",
-             formulas={"paint_color": "$gv(acc)$"}),
-        text(f'$tc(split, {rss("title")}, " | ", 1)$', title_size, title_font, TXT, width=300, lines=2, title="Manchete"),
-        text(f'${rss("desc")}$', 14, F_REG, MUTED, width=300, lines=2, title="Resumo"),
+             formulas={"paint_color": "$gv(acc)$", "text_width": "$gv(fw) - 214$"}),
+        text(f'$tc(split, {rss("title")}, " | ", 1)$', title_size, title_font, TXT, width=300, lines=2, title="Manchete", formulas={"text_width": "$gv(fw) - 214$"}),
+        text(f'${rss("desc")}$', 14, F_REG, MUTED, width=300, lines=2, title="Resumo", formulas={"text_width": "$gv(fw) - 214$"}),
     ], margin=7, title="Textos", position_anchor="CENTERLEFT", position_padding_left=190.0, position_padding_bottom=8.0)
 
 def live_dot(label="AO VIVO"):
@@ -98,14 +98,28 @@ def live_dot(label="AO VIVO"):
     ], stacking="HORIZONTAL_CENTER", margin=6, title="Indicador", position_anchor="TOPRIGHT",
        position_padding_right=22.0, position_padding_top=18.0)
 
+def spinner(size, dot, speed, lag, alpha, title):
+    # grupo do tamanho do anel que gira; o ponto preso no topo descreve a órbita
+    return overlap([
+        shape("CIRCLE", size, size, "#00000000", title="Área"),
+        shape("CIRCLE", dot, dot, "#FF34D1BF", title="Ponto", position_anchor="TOP",
+              formulas={"paint_color": f"$ce(gv(acc), alpha, {alpha})$"}),
+    ], title=title, config_rotate_mode="MANUAL",
+       formulas={"config_rotate_offset": f"$df(s)*{speed} - {lag}$"})
+
 def orbit(icon_formula=None, icon_name="newspaper-o"):
     ic = icon(icon_name, 36, "#FF34D1BF", formulas={"paint_color": "$gv(acc)$", **({"icon_icon": icon_formula} if icon_formula else {})})
+    trail = [spinner(134, 14 - i*3, 24, i*9, 100 - i*30, f"Órbita {i+1}") for i in range(3)]
+    inner = overlap([
+        shape("CIRCLE", 104, 104, "#00000000", title="Área"),
+        shape("CIRCLE", 8, 8, "#FF34D1BF", title="Ponto", position_anchor="BOTTOM",
+              formulas={"paint_color": "$ce(gv(acc), alpha, 70)$"}),
+    ], title="Órbita interna", config_rotate_mode="MANUAL",
+       formulas={"config_rotate_offset": "$360 - df(s)*36$"})
     return overlap([
         shape("CIRCLE", 134, 134, "#1AFFFFFF", title="Trilho", stroke=2),
-        shape("ARC", 134, 6, "#FF34D1BF", title="Órbita rápida", angle=95, shape_rotate_mode="MANUAL",
-              formulas={"shape_rotate_offset": "$df(s)*24$", "paint_color": "$gv(acc)$"}),
-        shape("ARC", 106, 3, "#9934D1BF", title="Órbita lenta", angle=60, shape_rotate_mode="MANUAL",
-              formulas={"shape_rotate_offset": "$360-df(s)*36$", "paint_color": "$ce(gv(acc), alpha, 60)$"}),
+        shape("CIRCLE", 104, 104, "#12FFFFFF", title="Trilho interno", stroke=1),
+        *trail, inner,
         shape("CIRCLE", 80, 80, "#2634D1BF", title="Miolo", formulas={"paint_color": "$ce(gv(acc), alpha, 16)$"}),
         ic,
     ], title="Visual", position_anchor="CENTERLEFT", position_padding_left=28.0)
@@ -144,7 +158,18 @@ def hint(label):
 
 
 # ---------- presets ----------
+SCALE = {"s": {"type": "TEXT", "value": f"$if(si(rwidth)/{W} < si(rheight)/{H}, si(rwidth)/{W}, si(rheight)/{H})$"},
+         "fw": {"type": "TEXT", "value": "$si(rwidth)/gv(s)$"},
+         "fh": {"type": "TEXT", "value": "$si(rheight)/gv(s)$"}}
+
 def preset(title, desc, globals_, children):
+    bg, rest = children[0], children[1:]
+    frame = shape("RECT", W, H, "#00000000", title="Moldura",
+                  formulas={"shape_width": "$gv(fw)$", "shape_height": "$gv(fh)$"})
+    content = overlap([frame] + rest, title="Conteúdo (escala automática)",
+                      formulas={"config_scale_value": "$gv(s)*100$"})
+    children = [bg, content]
+    globals_ = {**globals_, **SCALE}
     gl = {}
     for i, (k, v) in enumerate(globals_.items(), start=1):
         g = {"index": i, "title": k}
