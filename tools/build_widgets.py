@@ -72,31 +72,33 @@ def background(link_formula):
                formulas={"shape_width": "$si(rwidth)$", "shape_height": "$si(rheight)$"},
                internal_events=[{"type": "SINGLE_TAP", "action": "OPEN_LINK", "url": link_formula}])
 
-def glow():
+def glow(base=170, amp=14, **pos):
     # brilho que "respira" atrás do visual (ciclo de 4 s)
-    return shape("CIRCLE", 190, 190, "#2034D1BF", title="Brilho", position_anchor="CENTERLEFT",
-                 position_padding_left=4.0,
-                 formulas={"shape_width": "$170 + if(df(s)%4<2, df(s)%4, 4-df(s)%4)*14$",
+    return shape("CIRCLE", base + 20, base + 20, "#2034D1BF", title="Brilho", **pos,
+                 formulas={"shape_width": f"${base} + if(df(s)%4<2, df(s)%4, 4-df(s)%4)*{amp}$",
                            "paint_color": "$ce(gv(acc), alpha, 12)$"})
 
-def text_block(title_font=F_HEAD, title_size=21, with_date=True):
-    label = f'$tc(up, tc(split, {rss("title")}, " | ", 0))$'
-    if with_date:
-        label += '  ·  $tc(up, wg(gv(feed), rss, desc))$'
-    return stack([
+def text_block(m, anchor, padl, padb, off, title_lines=2, desc=True, title_font=F_HEAD, title_size=21):
+    tw = {"text_width": f"$gv(fw{m}) - {off}$"}
+    label = f'$tc(up, tc(split, {rss("title")}, " | ", 0))$  ·  $tc(up, wg(gv(feed), rss, desc))$'
+    items = [
         text(label, 12, F_BOLD, "#FF34D1BF", width=300, lines=1, title="Rótulo",
-             formulas={"paint_color": "$gv(acc)$", "text_width": "$gv(fw) - 214$"}),
-        text(f'$tc(split, {rss("title")}, " | ", 1)$', title_size, title_font, TXT, width=300, lines=2, title="Manchete", formulas={"text_width": "$gv(fw) - 214$"}),
-        text(f'${rss("desc")}$', 14, F_REG, MUTED, width=300, lines=2, title="Resumo", formulas={"text_width": "$gv(fw) - 214$"}),
-    ], margin=7, title="Textos", position_anchor="CENTERLEFT", position_padding_left=190.0, position_padding_bottom=8.0)
+             formulas={"paint_color": "$gv(acc)$", **tw}),
+        text(f'$tc(split, {rss("title")}, " | ", 1)$', title_size, title_font, TXT, width=300,
+             lines=title_lines, title="Manchete", formulas=dict(tw)),
+    ]
+    if desc:
+        items.append(text(f'${rss("desc")}$', 14, F_REG, MUTED, width=300, lines=2, title="Resumo", formulas=dict(tw)))
+    return stack(items, margin=7 if desc else 4, title="Textos", position_anchor=anchor,
+                 position_padding_left=float(padl), position_padding_bottom=float(padb))
 
-def live_dot(label="AO VIVO"):
+def live_dot(label, pad=(22, 18)):
     return stack([
         shape("CIRCLE", 9, 9, "#FF34D1BF", title="Pulso",
               formulas={"shape_width": "$if(df(s)%2=0, 10, 6)$", "paint_color": "$gv(acc)$"}),
         text(label, 10, F_BOLD, MUTED),
     ], stacking="HORIZONTAL_CENTER", margin=6, title="Indicador", position_anchor="TOPRIGHT",
-       position_padding_right=22.0, position_padding_top=18.0)
+       position_padding_right=float(pad[0]), position_padding_top=float(pad[1]))
 
 def spinner(size, dot, speed, lag, alpha, title):
     # grupo do tamanho do anel que gira; o ponto preso no topo descreve a órbita
@@ -107,7 +109,7 @@ def spinner(size, dot, speed, lag, alpha, title):
     ], title=title, config_rotate_mode="MANUAL",
        formulas={"config_rotate_offset": f"$df(s)*{speed} - {lag}$"})
 
-def orbit(icon_formula=None, icon_name="newspaper-o"):
+def orbit(icon_formula=None, icon_name="newspaper-o", **pos):
     ic = icon(icon_name, 36, "#FF34D1BF", formulas={"paint_color": "$gv(acc)$", **({"icon_icon": icon_formula} if icon_formula else {})})
     trail = [spinner(134, 14 - i*3, 24, i*9, 100 - i*30, f"Órbita {i+1}") for i in range(3)]
     inner = overlap([
@@ -122,19 +124,20 @@ def orbit(icon_formula=None, icon_name="newspaper-o"):
         *trail, inner,
         shape("CIRCLE", 80, 80, "#2634D1BF", title="Miolo", formulas={"paint_color": "$ce(gv(acc), alpha, 16)$"}),
         ic,
-    ], title="Visual", position_anchor="CENTERLEFT", position_padding_left=28.0)
+    ], title="Visual", **pos)
 
-def breathing_rings():
+def breathing_rings(**pos):
     rings = []
     for i, base in enumerate((140, 112, 84)):
         rings.append(shape("CIRCLE", base, base, "#559DA8FF", title=f"Anel {i+1}", stroke=2,
                            formulas={"shape_width": f"${base} + if((df(s)+{i})%4<2, (df(s)+{i})%4, 4-(df(s)+{i})%4)*6$",
                                      "paint_color": f"$ce(gv(acc), alpha, {70 - i*18})$"}))
+    rings.insert(0, shape("CIRCLE", 152, 152, "#00000000", title="Área"))
     rings.append(shape("CIRCLE", 70, 70, "#269DA8FF", title="Miolo", formulas={"paint_color": "$ce(gv(acc), alpha, 16)$"}))
     rings.append(icon("book", 32, "#FF9DA8FF", formulas={"paint_color": "$gv(acc)$"}))
-    return overlap(rings, title="Visual", position_anchor="CENTERLEFT", position_padding_left=22.0)
+    return overlap(rings, title="Visual", **pos)
 
-def keyboard():
+def keyboard(**pos):
     bars = [shape("RECT", 10, 20, "#FFC9A2FF", title=f"Barra {i+1}", corners=3,
                   formulas={"shape_height": f"$10 + mu(abs, mu(sin, df(s)*47 + {i*71}))*34$",
                             "paint_color": f"$ce(gv(acc), alpha, {100 - abs(2-i)*15})$"}) for i in range(5)]
@@ -143,40 +146,77 @@ def keyboard():
     return stack([
         stack(bars, stacking="HORIZONTAL_BOTTOM", margin=6, title="Equalizador"),
         stack(keys, stacking="HORIZONTAL_CENTER", margin=3, title="Teclado"),
-    ], margin=10, title="Visual", position_anchor="CENTERLEFT", position_padding_left=26.0)
+    ], stacking="VERTICAL_CENTER", margin=10, title="Visual", **pos)
 
-def pills():
+def pills(anchor, padl=None, padr=None, padb=22):
     items = [shape("RECT", 8, 6, DIM, title=f"Página {i+1}", corners=3,
                    formulas={"shape_width": f"$if(gv(sl)={i}, 14 + gv(el)*2.4, 8)$",
                              "paint_color": f"$if(gv(sl)={i}, gv(acc), \"#33FFFFFF\")$"}) for i in range(3)]
-    return stack(items, stacking="HORIZONTAL_CENTER", margin=6, title="Paginação",
-                 position_anchor="BOTTOMLEFT", position_padding_left=192.0, position_padding_bottom=22.0)
+    return stack(items, stacking="HORIZONTAL_CENTER", margin=6, title="Paginação", position_anchor=anchor,
+                 position_padding_left=float(padl) if padl else None,
+                 position_padding_right=float(padr) if padr else None, position_padding_bottom=float(padb))
 
-def hint(label):
+def hint(label, padb=18):
     return text(label + "  →", 11, F_BOLD, MUTED, title="Dica", position_anchor="BOTTOMRIGHT",
-                position_padding_right=24.0, position_padding_bottom=18.0)
+                position_padding_right=24.0, position_padding_bottom=float(padb))
+
+
+# ---------- layouts responsivos ----------
+# md: "l" = linha (4x1), "w" = largo (4x2), "v" = vertical/quadrado (2x2, 2x4, 4x4)
+MODES = {"w": (520, 250), "v": (300, 360), "l": (600, 150)}
+MODE_F = "$if(si(rwidth)/si(rheight) >= 3, l, if(si(rwidth)/si(rheight) >= 1.45, w, v))$"
+
+def scale_globals():
+    g = {"md": {"type": "TEXT", "value": MODE_F}}
+    for m, (dw, dh) in MODES.items():
+        g[f"z{m}"] = {"type": "TEXT", "value": f"$if(si(rwidth)/{dw} < si(rheight)/{dh}, si(rwidth)/{dw}, si(rheight)/{dh})$"}
+        g[f"fw{m}"] = {"type": "TEXT", "value": f"$si(rwidth)/gv(z{m})$"}
+        g[f"fh{m}"] = {"type": "TEXT", "value": f"$si(rheight)/gv(z{m})$"}
+    return g
+
+def layout(m, items):
+    dw, dh = MODES[m]
+    frame = shape("RECT", dw, dh, "#00000000", title="Moldura",
+                  formulas={"shape_width": f"$gv(fw{m})$", "shape_height": f"$gv(fh{m})$"})
+    names = {"w": "Layout largo (4x2)", "v": "Layout vertical (2x2, 2x4, 4x4)", "l": "Layout linha (4x1)"}
+    return overlap([frame] + items, title=names[m],
+                   formulas={"config_scale_value": f"$gv(z{m})*100$",
+                             "config_visible": f"$if(gv(md)={m}, ALWAYS, NEVER)$"})
+
+def build_layouts(visual, badge, footer, title_font=F_HEAD):
+    """visual(**pos) cria o visual; footer(m) devolve pills/dica para o modo."""
+    serif = title_font == F_SERIF
+    wide = layout("w", [
+        glow(position_anchor="CENTERLEFT", position_padding_left=4.0),
+        visual(position_anchor="CENTERLEFT", position_padding_left=26.0),
+        text_block("w", "CENTERLEFT", 190, 8, 214, title_font=title_font, title_size=24 if serif else 21),
+        live_dot(badge), footer("w")])
+    vert = layout("v", [
+        glow(base=118, amp=8, position_anchor="TOPLEFT", position_padding_left=10.0, position_padding_top=10.0),
+        visual(position_anchor="TOPLEFT", position_padding_left=20.0, position_padding_top=20.0,
+               config_scale_value=78.0),
+        text_block("v", "BOTTOMLEFT", 22, 44, 44, title_lines=3, title_font=title_font,
+                   title_size=26 if serif else 23),
+        live_dot(badge), footer("v")])
+    line = layout("l", [
+        visual(position_anchor="CENTERLEFT", position_padding_left=16.0, config_scale_value=68.0),
+        text_block("l", "CENTERLEFT", 128, 0, 190, title_lines=1, desc=False, title_font=title_font,
+                   title_size=24 if serif else 22),
+        live_dot(badge, pad=(18, 14)), footer("l")])
+    return [wide, vert, line]
 
 
 # ---------- presets ----------
-SCALE = {"s": {"type": "TEXT", "value": f"$if(si(rwidth)/{W} < si(rheight)/{H}, si(rwidth)/{W}, si(rheight)/{H})$"},
-         "fw": {"type": "TEXT", "value": "$si(rwidth)/gv(s)$"},
-         "fh": {"type": "TEXT", "value": "$si(rheight)/gv(s)$"}}
-
-def preset(title, desc, globals_, children):
-    bg, rest = children[0], children[1:]
-    frame = shape("RECT", W, H, "#00000000", title="Moldura",
-                  formulas={"shape_width": "$gv(fw)$", "shape_height": "$gv(fh)$"})
-    content = overlap([frame] + rest, title="Conteúdo (escala automática)",
-                      formulas={"config_scale_value": "$gv(s)*100$"})
-    children = [bg, content]
-    globals_ = {**globals_, **SCALE}
+def preset(title, desc, globals_, link, layouts):
+    globals_ = {**globals_, **scale_globals()}
     gl = {}
     for i, (k, v) in enumerate(globals_.items(), start=1):
         g = {"index": i, "title": k}
         g.update(v)
         gl[k] = g
     root = {"internal_events": [{"action": "KUSTOM_ACTION"}], "internal_type": "RootLayerModule",
-            "globals_list": gl, "config_scale_value": 100.0, "viewgroup_items": children}
+            "globals_list": gl, "config_scale_value": 100.0,
+            "viewgroup_items": [background(link)] + layouts}
     info = {"archive": "", "author": "Radar Diário", "description": desc, "email": "", "features": "",
             "pflags": 0, "hash": None, "height": H, "id": str(uuid.uuid4()), "locked": False,
             "release": 381530915, "ts": int(time.time() * 1000), "title": title, "version": 15,
@@ -192,22 +232,29 @@ def g_color(default, formula=None):
 def carousel():
     acc_f = f'$if(gv(sl)=0, "{ACC[0]}", if(gv(sl)=1, "{ACC[1]}", "{ACC[2]}"))$'
     icon_f = f'$if(gv(sl)=0, "{ICON[0]}", if(gv(sl)=1, "{ICON[1]}", "{ICON[2]}"))$'
+    foot = {"w": lambda: pills("BOTTOMLEFT", padl=192),
+            "v": lambda: pills("BOTTOMLEFT", padl=24),
+            "l": lambda: pills("BOTTOMRIGHT", padr=18, padb=14)}
     return preset("Radar Diário · Carrossel", "Tech IA, Estudo Bíblico e Teclado se alternando a cada 20 s.",
         {"feed": g_text(FEED), "sl": g_text("$mu(floor, df(s)/20)$"), "el": g_text("$df(s)%20$"),
-         "acc": g_color(ACC[0], acc_f)},
-        [background(f'${rss("link")}$'), glow(), orbit(icon_formula=icon_f), text_block(), live_dot("RADAR"), pills()])
+         "acc": g_color(ACC[0], acc_f)}, f'${rss("link")}$',
+        build_layouts(lambda **p: orbit(icon_formula=icon_f, **p), "RADAR", lambda m: foot[m]()))
 
 def single(idx, name, desc, visual, title_font=F_HEAD, badge="AO VIVO", hint_label="ABRIR"):
-    return preset(name, desc,
-        {"feed": g_text(FEED), "sl": g_text(str(idx)), "acc": g_color(ACC[idx])},
-        [background(f'${rss("link")}$'), glow(), visual, text_block(title_font=title_font), live_dot(badge), hint(hint_label)])
+    def foot(m):
+        if m == "l":
+            return shape("RECT", 1, 1, "#00000000", title="Vazio")
+        return hint(hint_label)
+    return preset(name, desc, {"feed": g_text(FEED), "sl": g_text(str(idx)), "acc": g_color(ACC[idx])},
+                  f'${rss("link")}$', build_layouts(visual, badge, foot, title_font))
 
 WIDGETS = {
     "Radar_Diario_Carrossel": carousel(),
-    "Radar_Tech_IA": single(0, "Radar · Tech IA", "Manchete do dia em tecnologia e IA.", orbit(icon_name=ICON[0])),
-    "Radar_Estudo_Biblico": single(1, "Radar · Estudo Bíblico", "Trecho do dia, livro por livro.", breathing_rings(),
+    "Radar_Tech_IA": single(0, "Radar · Tech IA", "Manchete do dia em tecnologia e IA.",
+                            lambda **p: orbit(icon_name=ICON[0], **p)),
+    "Radar_Estudo_Biblico": single(1, "Radar · Estudo Bíblico", "Trecho do dia, livro por livro.", breathing_rings,
                                    title_font=F_SERIF, badge="HOJE", hint_label="ESTUDAR"),
-    "Radar_Desafio_Teclado": single(2, "Radar · Teclado", "Desafio diário de inversões e rearranjo.", keyboard(),
+    "Radar_Desafio_Teclado": single(2, "Radar · Teclado", "Desafio diário de inversões e rearranjo.", keyboard,
                                     badge="DESAFIO", hint_label="PRATICAR"),
 }
 
