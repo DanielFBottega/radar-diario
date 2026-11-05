@@ -207,8 +207,25 @@ def build_layouts(visual, badge, footer, title_font=F_HEAD):
 
 
 # ---------- presets ----------
+def inline_scale(obj):
+    """Troca gv(zX)/gv(fwX)/gv(fhX) por expressões diretas e usa visibilidade sem globais."""
+    txt = json.dumps(obj, ensure_ascii=False)
+    for m, (dw, dh) in MODES.items():
+        z = f"if(si(rwidth)*{dh} < si(rheight)*{dw}, si(rwidth)/{dw}, si(rheight)/{dh})"
+        txt = txt.replace(f"gv(z{m})", f"({z})")
+        txt = txt.replace(f"gv(fw{m})", f"(si(rwidth)/({z}))")
+        txt = txt.replace(f"gv(fh{m})", f"(si(rheight)/({z}))")
+    line = "si(rwidth) >= si(rheight)*3"
+    vert = "si(rwidth) < si(rheight)*1.45"
+    vis = {"l": f"$if({line}, always, never)$",
+           "v": f"$if({vert}, always, never)$",
+           "w": f"$if(({line} | {vert}), never, always)$"}
+    for m, f in vis.items():
+        txt = txt.replace(json.dumps(f"$if(gv(md)={m}, ALWAYS, NEVER)$")[1:-1], json.dumps(f)[1:-1])
+    return json.loads(txt)
+
 def preset(title, desc, globals_, link, layouts):
-    globals_ = {**globals_, **scale_globals()}
+    layouts = [inline_scale(l) for l in layouts]
     gl = {}
     for i, (k, v) in enumerate(globals_.items(), start=1):
         g = {"index": i, "title": k}
