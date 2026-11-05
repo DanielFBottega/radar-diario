@@ -224,8 +224,40 @@ def inline_scale(obj):
         txt = txt.replace(json.dumps(f"$if(gv(md)={m}, ALWAYS, NEVER)$")[1:-1], json.dumps(f)[1:-1])
     return json.loads(txt)
 
+SCALE_PROPS = ["shape_width", "shape_height", "shape_corners", "paint_stroke", "text_size", "text_width",
+               "icon_size", "position_padding_left", "position_padding_right", "position_padding_top",
+               "position_padding_bottom", "config_margin", "position_offset_x", "position_offset_y"]
+
+def scale_by_formula(layout_node, m):
+    """Sem config_scale_value por fórmula (não funciona na tela inicial): cada medida vira valor*k."""
+    dw, dh = MODES[m]
+    k = f"if(si(rwidth)*{dh} < si(rheight)*{dw}, si(rwidth)/{dw}, si(rheight)/{dh})"
+    fm = layout_node.get("internal_formulas", {})
+    fm.pop("config_scale_value", None)
+    layout_node.get("internal_toggles", {}).pop("config_scale_value", None)
+    def walk(n):
+        f = n.setdefault("internal_formulas", {})
+        t = n.setdefault("internal_toggles", {})
+        for p in SCALE_PROPS:
+            if p in f:
+                expr = f[p].strip()
+                if expr.startswith("$") and expr.endswith("$") and expr.count("$") == 2:
+                    f[p] = f"$({expr[1:-1]})*({k})$"
+            elif isinstance(n.get(p), (int, float)):
+                f[p] = f"${n[p]}*({k})$"
+                t[p] = 10
+        if n.get("internal_title") == "Moldura":
+            f.update({"shape_width": "$si(rwidth)$", "shape_height": "$si(rheight)$"})
+        if not f: n.pop("internal_formulas")
+        if not t: n.pop("internal_toggles")
+        for c in n.get("viewgroup_items", []):
+            walk(c)
+    for c in layout_node.get("viewgroup_items", []):
+        walk(c)
+    return layout_node
+
 def preset(title, desc, globals_, link, layouts):
-    layouts = [inline_scale(l) for l in layouts]
+    layouts = [scale_by_formula(inline_scale(l), m) for l, m in zip(layouts, ("w", "v", "l"))]
     gl = {}
     for i, (k, v) in enumerate(globals_.items(), start=1):
         g = {"index": i, "title": k}
