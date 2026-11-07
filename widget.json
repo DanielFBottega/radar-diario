@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-06T09:56:02-03:00",
-  "data": "Sex, 6 nov",
+  "atualizado": "2026-11-07T08:23:29-03:00",
+  "data": "Sáb, 7 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Five9 compra a Level AI por US$ 325 mi",
-      "resumo": "Tencent lança o Hunyuan Hy4; Claude já leva 29% do gasto com IA no Reino Unido.",
+      "titulo": "DeepMind: agentes de IA acham falhas no RSA 1024",
+      "resumo": "Claude ganha módulo de finanças; Gemini Omni 1.2 Flash faz clipes de 15 s.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 3",
-      "titulo": "João 1:35-51 · Vem e vê",
-      "resumo": "Para memorizar: João 1:46.",
+      "rotulo": "Estudo · Dia 4",
+      "titulo": "João 2:1-12 · O melhor vinho guardado para o fim",
+      "resumo": "Para memorizar: João 2:5.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 3",
-      "titulo": "Sétima menor no ii, iii e vi (Ré)",
-      "resumo": "Menor → m7, D–Bm7–Em7–A7 e F#m7 no lugar do D/F#.",
+      "rotulo": "Teclado · Dia 4",
+      "titulo": "Nona (add9): o brilho do I, IV e vi (Lá)",
+      "resumo": "Tríade → add9, Aadd9–Dadd9–F#m(add9)–E e intro com baixo descendo.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
