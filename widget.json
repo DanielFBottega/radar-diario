@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-07T08:23:29-03:00",
-  "data": "Sáb, 7 nov",
+  "atualizado": "2026-11-08T08:24:00-03:00",
+  "data": "Dom, 8 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "DeepMind: agentes de IA acham falhas no RSA 1024",
-      "resumo": "Claude ganha módulo de finanças; Gemini Omni 1.2 Flash faz clipes de 15 s.",
+      "titulo": "Atalho do Claude Code expôs segredos em repositórios",
+      "resumo": "Agentes de IA roubaram certificados da Apple; IA refuta hipótese de 1998.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 4",
-      "titulo": "João 2:1-12 · O melhor vinho guardado para o fim",
-      "resumo": "Para memorizar: João 2:5.",
+      "rotulo": "Estudo · Dia 5",
+      "titulo": "João 2:13-25 · Zelo pela casa do Pai",
+      "resumo": "Para memorizar: João 2:19.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 4",
-      "titulo": "Nona (add9): o brilho do I, IV e vi (Lá)",
-      "resumo": "Tríade → add9, Aadd9–Dadd9–F#m(add9)–E e intro com baixo descendo.",
+      "rotulo": "Teclado · Dia 5",
+      "titulo": "Sus2 e sus4: suspender e resolver (Mi)",
+      "resumo": "Terça→sus→terça, E–Asus2–A–Bsus4–B–E, intro com melodia e final sus.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
