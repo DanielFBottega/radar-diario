@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-08T08:24:00-03:00",
-  "data": "Dom, 8 nov",
+  "atualizado": "2026-11-09T08:25:00-03:00",
+  "data": "Seg, 9 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Atalho do Claude Code expôs segredos em repositórios",
-      "resumo": "Agentes de IA roubaram certificados da Apple; IA refuta hipótese de 1998.",
+      "titulo": "Trocados por IA voltam ao emprego e ganham mais",
+      "resumo": "Anthropic alerta clientes sobre acesso indevido; Nvidia abre investigação.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 5",
-      "titulo": "João 2:13-25 · Zelo pela casa do Pai",
-      "resumo": "Para memorizar: João 2:19.",
+      "rotulo": "Estudo · Dia 6",
+      "titulo": "João 3:1-21 · Nascer de novo",
+      "resumo": "Para memorizar: João 3:16.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 5",
-      "titulo": "Sus2 e sus4: suspender e resolver (Mi)",
-      "resumo": "Terça→sus→terça, E–Asus2–A–Bsus4–B–E, intro com melodia e final sus.",
+      "rotulo": "Teclado · Dia 6",
+      "titulo": "Passagem: diminutos e baixo caminhando (Fá)",
+      "resumo": "F–F#°–Gm, Bb–B°–F/C, baixo descendo F→Sol e C–C#°–Dm.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
