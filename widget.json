@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-09T08:25:00-03:00",
-  "data": "Seg, 9 nov",
+  "atualizado": "2026-11-10T08:23:44-03:00",
+  "data": "Ter, 10 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Trocados por IA voltam ao emprego e ganham mais",
-      "resumo": "Anthropic alerta clientes sobre acesso indevido; Nvidia abre investigação.",
+      "titulo": "Anthropic pede IPO de até US$ 69,3 bi na Nasdaq",
+      "resumo": "Anthropic lança Fable e Mythos 5.2; agente com DeepSeek invadiu operadora europeia.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 6",
-      "titulo": "João 3:1-21 · Nascer de novo",
-      "resumo": "Para memorizar: João 3:16.",
+      "rotulo": "Estudo · Dia 7",
+      "titulo": "João 3:22-36 · É necessário que ele cresça",
+      "resumo": "Para memorizar: João 3:30.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 6",
-      "titulo": "Passagem: diminutos e baixo caminhando (Fá)",
-      "resumo": "F–F#°–Gm, Bb–B°–F/C, baixo descendo F→Sol e C–C#°–Dm.",
+      "rotulo": "Teclado · Dia 7",
+      "titulo": "Dominantes secundárias: o acorde que aponta (Si bemol)",
+      "resumo": "Bb–Bb7–Eb, D7/F#→Gm, cadeia G7/B–Cm–C7/E–F e A7/C#→Dm.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
