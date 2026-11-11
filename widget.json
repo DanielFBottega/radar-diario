@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-10T08:23:44-03:00",
-  "data": "Ter, 10 nov",
+  "atualizado": "2026-11-11T08:27:00-03:00",
+  "data": "Qua, 11 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Anthropic pede IPO de até US$ 69,3 bi na Nasdaq",
-      "resumo": "Anthropic lança Fable e Mythos 5.2; agente com DeepSeek invadiu operadora europeia.",
+      "titulo": "Anthropic lança Claude Sheets, Meetings e Whiteboards",
+      "resumo": "Google libera Gemini 4 Carbon; OpenAI perde US$ 10,9 bi no 3º tri.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 7",
-      "titulo": "João 3:22-36 · É necessário que ele cresça",
-      "resumo": "Para memorizar: João 3:30.",
+      "rotulo": "Estudo · Dia 8",
+      "titulo": "João 4:1-26 · A água viva",
+      "resumo": "Para memorizar: João 4:24.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 7",
-      "titulo": "Dominantes secundárias: o acorde que aponta (Si bemol)",
-      "resumo": "Bb–Bb7–Eb, D7/F#→Gm, cadeia G7/B–Cm–C7/E–F e A7/C#→Dm.",
+      "rotulo": "Teclado · Dia 8",
+      "titulo": "Baixo pedal: o chão que não se move (Mi bemol)",
+      "resumo": "Eb–Ab/Eb–Bb/Eb, pedal em Sib com Ab/Bb, escada sobre Mib e final Abm/Eb.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
