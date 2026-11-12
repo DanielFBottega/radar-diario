@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-11T08:27:00-03:00",
-  "data": "Qua, 11 nov",
+  "atualizado": "2026-11-12T08:25:00-03:00",
+  "data": "Qui, 12 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Anthropic lança Claude Sheets, Meetings e Whiteboards",
-      "resumo": "Google libera Gemini 4 Carbon; OpenAI perde US$ 10,9 bi no 3º tri.",
+      "titulo": "Hackers usam agente de IA contra governo do Tadjiquistão",
+      "resumo": "Databricks lança Genie 2; Anthropic bloqueia o Claude na China continental.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 8",
-      "titulo": "João 4:1-26 · A água viva",
-      "resumo": "Para memorizar: João 4:24.",
+      "rotulo": "Estudo · Dia 9",
+      "titulo": "João 4:27-42 · Os campos já estão brancos",
+      "resumo": "Para memorizar: João 4:35.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 8",
-      "titulo": "Baixo pedal: o chão que não se move (Mi bemol)",
-      "resumo": "Eb–Ab/Eb–Bb/Eb, pedal em Sib com Ab/Bb, escada sobre Mib e final Abm/Eb.",
+      "rotulo": "Teclado · Dia 9",
+      "titulo": "Inversões em louvores lentos (Lá)",
+      "resumo": "A, A/C# e A/E; baixo que desce e que sobe (D–D/F#–E/G#) e final suave com Bm7.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
