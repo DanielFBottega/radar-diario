@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-13T08:23:00-03:00",
-  "data": "Sex, 13 nov",
+  "atualizado": "2026-11-14T08:25:00-03:00",
+  "data": "Sáb, 14 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Hackers usam IA para roubar documentos do Tadjiquistão",
-      "resumo": "Databricks lança Genie 2; Anthropic bloqueia o Claude na China continental.",
+      "titulo": "Nvidia busca sucessor de Huang e sonda o CEO da Arm",
+      "resumo": "ChatGPT ganha carteira para agentes comprarem; OpenAI lança agentes de segurança.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 9",
-      "titulo": "João 4:27–42 · Os campos já estão brancos",
-      "resumo": "Para memorizar: João 4:35.",
+      "rotulo": "Estudo · Dia 10",
+      "titulo": "João 4:43–54 · Vai, o teu filho vive",
+      "resumo": "Para memorizar: João 4:50.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 9",
-      "titulo": "Inversões em louvores lentos (Lá)",
-      "resumo": "A, A/C# e A/E; baixo que desce e que sobe (D–D/F#–E/G#) e final suave com Bm7.",
+      "rotulo": "Teclado · Dia 10",
+      "titulo": "Levadas de mão esquerda (Mi)",
+      "resumo": "Nota longa, fundamental e quinta, arpejo com B/D# e oitavas pulsadas até 84 bpm.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
