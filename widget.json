@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-14T08:25:00-03:00",
-  "data": "Sáb, 14 nov",
+  "atualizado": "2026-11-15T08:23:40-03:00",
+  "data": "Dom, 15 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Nvidia busca sucessor de Huang e sonda o CEO da Arm",
-      "resumo": "ChatGPT ganha carteira para agentes comprarem; OpenAI lança agentes de segurança.",
+      "titulo": "Cursor detalha ataque com falsas extensões do Claude",
+      "resumo": "Google libera /teamwork no Antigravity; Itália multa a Meta em € 805 mi.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 10",
-      "titulo": "João 4:43–54 · Vai, o teu filho vive",
-      "resumo": "Para memorizar: João 4:50.",
+      "rotulo": "Estudo · Dia 11",
+      "titulo": "João 5:1–18 · Levanta-te, toma a tua cama e anda",
+      "resumo": "Para memorizar: João 5:8.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 10",
-      "titulo": "Levadas de mão esquerda (Mi)",
-      "resumo": "Nota longa, fundamental e quinta, arpejo com B/D# e oitavas pulsadas até 84 bpm.",
+      "rotulo": "Teclado · Dia 11",
+      "titulo": "Sétima maior e sétima menor (Fá)",
+      "resumo": "Tétrades do campo de Fá, clichê Fá–Mi–Mib–Ré, I–vi–ii–V e baixo descendente.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
