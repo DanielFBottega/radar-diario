@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-15T08:23:40-03:00",
-  "data": "Dom, 15 nov",
+  "atualizado": "2026-11-16T08:24:00-03:00",
+  "data": "Seg, 16 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Cursor detalha ataque com falsas extensões do Claude",
-      "resumo": "Google libera /teamwork no Antigravity; Itália multa a Meta em € 805 mi.",
+      "titulo": "Lovable: quase 25 mil sites com banco de dados aberto",
+      "resumo": "ChatGPT Wallet paga compras via agente; Alibaba lança o Qwen4-Max com 1 mi de tokens.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 11",
-      "titulo": "João 5:1–18 · Levanta-te, toma a tua cama e anda",
-      "resumo": "Para memorizar: João 5:8.",
+      "rotulo": "Estudo · Dia 12",
+      "titulo": "João 5:19–30 · Passou da morte para a vida",
+      "resumo": "Para memorizar: João 5:24.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 11",
-      "titulo": "Sétima maior e sétima menor (Fá)",
-      "resumo": "Tétrades do campo de Fá, clichê Fá–Mi–Mib–Ré, I–vi–ii–V e baixo descendente.",
+      "rotulo": "Teclado · Dia 12",
+      "titulo": "Acordes com nona: add9 e maj9 (Sib)",
+      "resumo": "add9 no campo de Sib, add9 × maj9, I–IV–vi–V–I com nonas e baixo subindo.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
