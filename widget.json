@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-16T08:24:00-03:00",
-  "data": "Seg, 16 nov",
+  "atualizado": "2026-11-17T08:24:00-03:00",
+  "data": "Ter, 17 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Lovable: quase 25 mil sites com banco de dados aberto",
-      "resumo": "ChatGPT Wallet paga compras via agente; Alibaba lança o Qwen4-Max com 1 mi de tokens.",
+      "titulo": "Google flagra IA que transforma patches em exploits",
+      "resumo": "Malware via Optimizely atinge 178 empresas; EUA exigem licença de chips de IA ao Brasil.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 12",
-      "titulo": "João 5:19–30 · Passou da morte para a vida",
-      "resumo": "Para memorizar: João 5:24.",
+      "rotulo": "Estudo · Dia 13",
+      "titulo": "João 5:31–47 · São elas que de mim testificam",
+      "resumo": "Para memorizar: João 5:39.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 12",
-      "titulo": "Acordes com nona: add9 e maj9 (Sib)",
-      "resumo": "add9 no campo de Sib, add9 × maj9, I–IV–vi–V–I com nonas e baixo subindo.",
+      "rotulo": "Teclado · Dia 13",
+      "titulo": "Acordes suspensos: sus2 e sus4 (Mib)",
+      "resumo": "Eb↔sus4↔sus2, uma forma dois nomes, Bbsus4 → Bb e intro/final com suspensos.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
