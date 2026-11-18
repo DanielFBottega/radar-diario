@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-17T08:24:00-03:00",
-  "data": "Ter, 17 nov",
+  "atualizado": "2026-11-18T08:24:00-03:00",
+  "data": "Qua, 18 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Google flagra IA que transforma patches em exploits",
-      "resumo": "Malware via Optimizely atinge 178 empresas; EUA exigem licença de chips de IA ao Brasil.",
+      "titulo": "FBI: IA aberta Artex invade redes em menos de 3 horas",
+      "resumo": "Otan usa 300 bi de tokens da OpenAI; Mythos porta kernels para AMD em 3 dias.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 13",
-      "titulo": "João 5:31–47 · São elas que de mim testificam",
-      "resumo": "Para memorizar: João 5:39.",
+      "rotulo": "Estudo · Dia 14",
+      "titulo": "João 6:1–15 · Que é isso para tantos?",
+      "resumo": "Para memorizar: João 6:11.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 13",
-      "titulo": "Acordes suspensos: sus2 e sus4 (Mib)",
-      "resumo": "Eb↔sus4↔sus2, uma forma dois nomes, Bbsus4 → Bb e intro/final com suspensos.",
+      "rotulo": "Teclado · Dia 14",
+      "titulo": "Acordes de passagem: o diminuto (Dó)",
+      "resumo": "C → C#°7 → Dm, escada cromática, F → F#°7 → C/G e G#°7 → Am.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
