@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-18T08:24:00-03:00",
-  "data": "Qua, 18 nov",
+  "atualizado": "2026-11-19T08:23:48-03:00",
+  "data": "Qui, 19 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "FBI: IA aberta Artex invade redes em menos de 3 horas",
-      "resumo": "Otan usa 300 bi de tokens da OpenAI; Mythos porta kernels para AMD em 3 dias.",
+      "titulo": "Anthropic precifica IPO a US$ 83, acima da faixa",
+      "resumo": "Microsoft refaz Copilot com agentes autônomos; Codex acha falha crítica no Java.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 14",
-      "titulo": "João 6:1–15 · Que é isso para tantos?",
-      "resumo": "Para memorizar: João 6:11.",
+      "rotulo": "Estudo · Dia 15",
+      "titulo": "João 6:16–29 · Sou eu, não temais",
+      "resumo": "Para memorizar: João 6:29.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 14",
-      "titulo": "Acordes de passagem: o diminuto (Dó)",
-      "resumo": "C → C#°7 → Dm, escada cromática, F → F#°7 → C/G e G#°7 → Am.",
+      "rotulo": "Teclado · Dia 15",
+      "titulo": "Dominantes secundárias (Sol)",
+      "resumo": "E7/G# → Am, A7 → D, ciclo B7 · E7 · D7 → G e G7 → C.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
