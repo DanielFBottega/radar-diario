@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-20T08:23:35-03:00",
-  "data": "Sex, 20 nov",
+  "atualizado": "2026-11-22T08:24:02-03:00",
+  "data": "Dom, 22 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Falha Ruby2Shell expõe apps Rails a execução remota",
-      "resumo": "Bancos passam ao cliente prejuízos de agentes de IA; OpenAI usa IA para projetar chips.",
+      "titulo": "OpenRouter tira 125 endpoints da retenção zero",
+      "resumo": "Falha em banco derruba ChatGPT por 3,5 h; Lean endossa prova da Hipótese de Riemann.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 16",
-      "titulo": "João 6:30–40 · Eu sou o pão da vida",
-      "resumo": "Para memorizar: João 6:35.",
+      "rotulo": "Estudo · Dia 18",
+      "titulo": "João 6:60–71 · Senhor, para quem iremos?",
+      "resumo": "Para memorizar: João 6:68.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 16",
-      "titulo": "Sus2 e sus4 em Ré",
-      "resumo": "D·Dsus4·Dsus2, Asus4 → A, louvor com sus e A7sus4 → D com final Dsus4.",
+      "rotulo": "Teclado · Dia 18",
+      "titulo": "Acordes de passagem em Mi",
+      "resumo": "Baixo descendo E·B/D#·C#m, diminutos Fº→F#m, A#º→E/B e Gº→E/G#.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
