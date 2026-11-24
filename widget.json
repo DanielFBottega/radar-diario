@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-23T08:23:29-03:00",
-  "data": "Seg, 23 nov",
+  "atualizado": "2026-11-24T08:24:13-03:00",
+  "data": "Ter, 24 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Agente de código vaza credencial da Together AI",
-      "resumo": "Gemini 4 Neon lidera índice de agentes; Anthropic lança guia de confiança zero.",
+      "titulo": "Nvidia readmite Jensen Huang como CEO",
+      "resumo": "Anthropic lança o Claude Ship; OpenAI e Cisco apresentam o Shirudo para Linux.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 19",
-      "titulo": "João 7:1–24 · Não julgueis pela aparência",
-      "resumo": "Para memorizar: João 7:24.",
+      "rotulo": "Estudo · Dia 20",
+      "titulo": "João 7:25–36 · De onde vem o Cristo?",
+      "resumo": "Para memorizar: João 7:29.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 19",
-      "titulo": "Dominantes secundárias em Fá",
-      "resumo": "D7→Gm, A7→Dm, A7/C# com baixo Sib→Dó→Dó#→Ré e G7→C.",
+      "rotulo": "Teclado · Dia 20",
+      "titulo": "Levadas de mão esquerda em Si bemol (Bb)",
+      "resumo": "Oitavas com baixo descendo, fundamental e quinta, e arpejo aberto 1–5–8–10.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
