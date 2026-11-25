@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-24T08:24:13-03:00",
-  "data": "Ter, 24 nov",
+  "atualizado": "2026-11-25T08:24:00-03:00",
+  "data": "Qua, 25 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Nvidia readmite Jensen Huang como CEO",
-      "resumo": "Anthropic lança o Claude Ship; OpenAI e Cisco apresentam o Shirudo para Linux.",
+      "titulo": "CrowdStrike vai comprar a Zscaler por US$ 44 bi",
+      "resumo": "APIs de busca entregam código malicioso a agentes; Claude escreve prova de VP ≠ VNP.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 20",
-      "titulo": "João 7:25–36 · De onde vem o Cristo?",
-      "resumo": "Para memorizar: João 7:29.",
+      "rotulo": "Estudo · Dia 21",
+      "titulo": "João 7:37–52 · Se alguém tem sede, venha a mim",
+      "resumo": "Para memorizar: João 7:37.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 20",
-      "titulo": "Levadas de mão esquerda em Si bemol (Bb)",
-      "resumo": "Oitavas com baixo descendo, fundamental e quinta, e arpejo aberto 1–5–8–10.",
+      "rotulo": "Teclado · Dia 21",
+      "titulo": "Rearranjo de introdução em Mi bemol (Eb)",
+      "resumo": "7ª maior, baixo pedal em Mib e intro Ebsus2–Ebmaj7–Abmaj7–Bbsus4.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
