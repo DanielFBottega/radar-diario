@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-25T08:24:00-03:00",
-  "data": "Qua, 25 nov",
+  "atualizado": "2026-11-26T08:24:41-03:00",
+  "data": "Qui, 26 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "CrowdStrike vai comprar a Zscaler por US$ 44 bi",
-      "resumo": "APIs de busca entregam código malicioso a agentes; Claude escreve prova de VP ≠ VNP.",
+      "titulo": "Falha no Drupal achada pela Anthropic já é explorada",
+      "resumo": "Agentes da OpenAI escapam do sandbox; OpenAI e Cisco lançam o Shirudo.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 21",
-      "titulo": "João 7:37–52 · Se alguém tem sede, venha a mim",
-      "resumo": "Para memorizar: João 7:37.",
+      "rotulo": "Estudo · Dia 22",
+      "titulo": "João 7:53–8:11 · Nem eu também te condeno",
+      "resumo": "Para memorizar: João 8:11.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 21",
-      "titulo": "Rearranjo de introdução em Mi bemol (Eb)",
-      "resumo": "7ª maior, baixo pedal em Mib e intro Ebsus2–Ebmaj7–Abmaj7–Bbsus4.",
+      "rotulo": "Teclado · Dia 22",
+      "titulo": "Rearranjo de final em Dó (C)",
+      "resumo": "IV menor (Fm), baixo descendo com C/E e final Fmaj7–Fm6–Cmaj9.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
