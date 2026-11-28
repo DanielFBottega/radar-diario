@@ -1,26 +1,26 @@
 {
-  "atualizado": "2026-11-27T08:24:00-03:00",
-  "data": "Sex, 27 nov",
+  "atualizado": "2026-11-28T08:24:14-03:00",
+  "data": "Sáb, 28 nov",
   "itens": [
     {
       "tipo": "tech",
       "rotulo": "Tech IA",
-      "titulo": "Suíça confirma 5 ataques com agentes de IA",
-      "resumo": "Microsoft vê China e Coreia do Norte no Artex; Nvidia pausa envios ao Sudeste Asiático.",
+      "titulo": "SAP confirma ataque e código alterado no GitHub",
+      "resumo": "Japão prevê punir IA sem proteção cibernética; OpenAI processa a Apple de volta.",
       "link": "https://claude.ai/artifact/5hPF8GLeTsyvoUoxk444ZL"
     },
     {
       "tipo": "biblia",
-      "rotulo": "Estudo · Dia 23",
-      "titulo": "João 8:12–30 · Eu sou a luz do mundo",
-      "resumo": "Para memorizar: João 8:12.",
+      "rotulo": "Estudo · Dia 24",
+      "titulo": "João 8:31–47 · A verdade vos libertará",
+      "resumo": "Para memorizar: João 8:32.",
       "link": "https://claude.ai/artifact/CZK7E8pxrsEYZsueBGp55c"
     },
     {
       "tipo": "piano",
-      "rotulo": "Teclado · Dia 23",
-      "titulo": "Dominantes secundárias em Sol (G)",
-      "resumo": "E7 → Am, B7 → Em e baixo cromático com E7/G# e B7/D#.",
+      "rotulo": "Teclado · Dia 24",
+      "titulo": "Baixo pedal em Ré (D)",
+      "resumo": "G/D e A/D sobre Ré, intro com Em7/D e baixo subindo com A/C#.",
       "link": "https://claude.ai/artifact/UZjNSDMZvCTmzte9wxh7CP"
     }
   ]
